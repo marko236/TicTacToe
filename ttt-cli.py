@@ -3,7 +3,7 @@ x=0
 import os
 def draw():
     os.system("clear")
-    print("K   1   2   3")
+    print("C   1   2   3")
     print("R /-----------\\")
     for i in range(2):
         print(str(i+1)+" | ",end="")
