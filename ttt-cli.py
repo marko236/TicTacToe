@@ -17,8 +17,8 @@ def draw():
 while True:
     draw()
     x+=1
-    k=int(input("Kolona: "))
-    r=int(input("Red: "))
+    k=int(input("Column: "))
+    r=int(input("Row: "))
     k-=1
     r-=1
     if x%2==1:
@@ -26,30 +26,30 @@ while True:
             if fl[r][k]==' ':
                 fl[r][k]='X'
             else:
-                print("Greška, probaj ponovo")
+                print("ERROR: Try again")
                 x-=1
         else:
-            print("Greška, probaj ponovo.")
+            print("ERROR: Try again")
             x-=1
     else:
         if r<=2 and k<=2:
             if fl[r][k]==' ':
                 fl[r][k]='O'
             else:
-                print("Greška, probaj ponovo")
+                print("ERROR: Try again")
                 x-=1
         else:
-            print("Greška, probaj ponovo.")
+            print("ERROR: Try again")
             x-=1
     if fl[0][0]==fl[0][1]==fl[0][2]=='X' or fl[1][0]==fl[1][1]==fl[1][2]=='X' or fl[2][0]==fl[2][1]==fl[2][2]=='X' or fl[1][0]==fl[2][0]==fl[0][0]=='X' or fl[1][1]==fl[0][1]==fl[2][1]=='X' or fl[2][2]==fl[1][2]==fl[0][2]=='X' or fl[0][0]==fl[1][1]==fl[2][2]=="X" or fl[0][2]==fl[1][1]==fl[2][0]=='X':
         draw()
-        print("Pobednik je X")
+        print("X has obliterated O")
         break
     elif fl[0][0]==fl[0][1]==fl[0][2]=='O' or fl[1][0]==fl[1][1]==fl[1][2]=='O' or fl[2][0]==fl[2][1]==fl[2][2]=='O' or fl[1][0]==fl[2][0]==fl[0][0]=='O' or fl[1][1]==fl[0][1]==fl[2][1]=='O' or fl[2][2]==fl[1][2]==fl[0][2]=='O' or fl[0][0]==fl[1][1]==fl[2][2]=="O" or fl[0][2]==fl[1][1]==fl[2][0]=='O':
         draw()
-        print("Pobednik je O")
+        print("O smashed X into pieces")
         break
     if x==9:
         draw()
-        print("Nerješeno")
+        print("A stalemate has occurred")
         break
